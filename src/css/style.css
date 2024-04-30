@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 10000px;
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav .navbar {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav .navbar-l {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav .navbar a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+nav .navbar a:hover {
+  cursor: pointer;
+}
+
+.container {
+  height: 90vh;
+  width: 100%;
+  position: fixed;
+}
+
+.container .layar {
+  height: 100%;
+  border-bottom: 5px solid black;
+  overflow: hidden;
+}
+
+.container .layar #home {
+  border: 1px solid black;
+}
+
+.container .layar #t-rex {
+  position: absolute;
+  top: 88%;
+  left: 30px;
+}
+
+.container .layar .judul {
+  position: absolute;
+  top: 14%;
+  left: 150px;
+  padding: 10px;
+}
+
+.container .layar .judul h1:nth-child(1) {
+  font-size: 170px;
+  margin: 0px;
+}
+
+.container .layar .judul h1:nth-child(2) {
+  margin-top: -10px;
+  font-size: 50px;
+}
+
+.container .layar .profile {
+  position: absolute;
+  top: 15%;
+  left: 700px;
+  border: 2px dashed black;
+  border-radius: 100%;
+  padding: 0;
+}
+
+.container .trap {
+  position: absolute;
+  top: 46%;
+}
+
+.container .layar #about .con-about {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, white 5% , gray);
+  position: absolute;
+  top: -0.5px;
+}
