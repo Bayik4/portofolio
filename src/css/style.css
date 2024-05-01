@@ -65,7 +65,7 @@ nav .navbar a:hover {
 
 .container .layar #t-rex {
   position: absolute;
-  top: 88%;
+  top: 89%;
   left: 30px;
 }
 
@@ -97,11 +97,10 @@ nav .navbar a:hover {
 
 .container .trap {
   position: absolute;
-  top: 46%;
+  top: 48%;
 }
 
 .container .layar #about .con-about {
-  width: 100%;
   height: 100%;
   background-image: linear-gradient(to right, white 5% , gray);
   position: absolute;

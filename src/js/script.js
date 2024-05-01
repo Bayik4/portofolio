@@ -15,15 +15,11 @@ $(".con-about").css({
 
 // scroll t-rex
 $(window).scroll(function() {
-  const wScroll = $(this).scrollTop();
+  const wScroll = $(this).scrollTop()/3;
 
   const titikTengah = $(window).width()/2;
 
   console.log(wScroll)
-
-  $(".con-about").css({
-    "left": $(window).width() - (wScroll/5) + "px"
-  });
 
   // t-rex scroll
   if(wScroll > 30) {
@@ -43,17 +39,38 @@ $(window).scroll(function() {
       $("#t-rex img").attr("src", "/src/img/pixil-frame-0.png");
     }
 
-    if(wScroll > 720 && wScroll < 800) {
-      $("#t-rex").css({
-        "top": "80%"
-      });
+    if(wScroll > 700 && wScroll < 900) {
+      if(wScroll > 754 && wScroll < 810) {
+        $("#t-rex").css({
+          "top": "80%"
+        });
+      }
+      
+      if(wScroll > 810 || wScroll < 754) {
+        $("#t-rex").css({
+          "top": "89%"
+        });
+      }
+
     }
-    
-    if(wScroll > 800 || wScroll < 720) {
-      $("#t-rex").css({
-        "top": "88%"
-      });
+
+    if(wScroll > 2000 && wScroll < 2250) {
+      if(wScroll > 2119 && wScroll < 2195) {
+        $("#t-rex").css({
+          "top": "80%"
+        });
+      }
+  
+      if(wScroll > 2195 || wScroll < 2119) {
+        $("#t-rex").css({
+          "top": "89%"
+        });
+      }
+
     }
+
+
+
   }
 });
 
@@ -100,9 +117,23 @@ $(window).scroll(function() {
 
 // trap scroll
 $(window).scroll(function() {
+  const wScroll = $(this).scrollTop()/3;
+
+  $(".trap1").css({
+    "left": trap - wScroll + "px"
+  });
+
+  $(".trap2").css({
+    "left": (trap*2) - wScroll + "px"
+  });
+
+});
+
+$(window).scroll(function() {
   const wScroll = $(this).scrollTop();
 
-  $(".trap").css({
-    "left": trap - wScroll + "px"
+  $(".con-about").css({
+    "left": $(window).width() - (wScroll/5) + "px",
+    "width": $(window).width() + "px"
   });
 });
