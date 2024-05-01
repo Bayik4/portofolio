@@ -1,6 +1,113 @@
 // trap
 const trap = $(window).width();
 
+// navbar effect
+$('a#home').click(function(event) {
+  event.preventDefault();
+  $('html,body').animate({
+    scrollTop: 0
+  }, 'slow');
+
+  $(this).addClass("active");
+  $('a#about').removeClass("active");
+  $('a#work').removeClass("active");
+  $('a#skill').removeClass("active");
+  $('a#contact').removeClass("active");
+});
+
+$('a#about').click(function(event) {
+  event.preventDefault();
+  $('html,body').animate({
+    scrollTop: 6704
+  }, 'slow');
+
+  $('a#home').removeClass("active");
+  $(this).addClass("active");
+  $('a#work').removeClass("active");
+  $('a#skill').removeClass("active");
+  $('a#contact').removeClass("active");
+});
+
+$('a#work').click(function(event) {
+  event.preventDefault();
+  $('html,body').animate({
+    scrollTop: 13462
+  }, 'slow');
+
+  $('a#home').removeClass("active");
+  $('a#about').removeClass("active");
+  $(this).addClass("active");
+  $('a#skill').removeClass("active");
+  $('a#contact').removeClass("active");
+});
+
+$('a#skill').click(function(event) {
+  event.preventDefault();
+  $('html,body').animate({
+    scrollTop: 20191
+  }, 'slow');
+
+  $('a#home').removeClass("active");
+  $('a#about').removeClass("active");
+  $('a#work').removeClass("active");
+  $(this).addClass("active");
+  $('a#contact').removeClass("active");
+});
+
+$('a#contact').click(function(event) {
+  event.preventDefault();
+  $('html,body').animate({
+    scrollTop: 26934
+  }, 'slow');
+
+  $('a#home').removeClass("active");
+  $('a#about').removeClass("active");
+  $('a#work').removeClass("active");
+  $('a#skill').removeClass("active");
+  $(this).addClass("active");
+});
+
+// navbar effect scroll
+$(window).scroll(function() {
+  const sc = $(this).scrollTop();
+
+  if(sc < 2871) {
+    $('a#home').addClass("active");
+    $('a#about').removeClass("active");
+    $('a#work').removeClass("active");
+    $('a#skill').removeClass("active");
+    $('a#contact').removeClass("active");
+  }else if(sc > 2871 && sc < 9568) {
+    $('a#home').removeClass("active");
+    $('a#about').addClass("active");
+    $('a#work').removeClass("active");
+    $('a#skill').removeClass("active");
+    $('a#contact').removeClass("active");
+  } else if (sc > 9568 && sc < 16312) {
+    $('a#home').removeClass("active");
+    $('a#about').removeClass("active");
+    $('a#work').addClass("active");
+    $('a#skill').removeClass("active");
+    $('a#contact').removeClass("active");
+  } else if (sc > 16312 && sc < 23113) {
+    $('a#home').removeClass("active");
+    $('a#about').removeClass("active");
+    $('a#work').removeClass("active");
+    $('a#skill').addClass("active");
+    $('a#contact').removeClass("active");
+  } else if(sc > 23113) {
+    $('a#home').removeClass("active");
+    $('a#about').removeClass("active");
+    $('a#work').removeClass("active");
+    $('a#skill').removeClass("active");
+    $('a#contact').addClass("active");
+  }
+
+  console.log(sc);
+});
+// end navbar effect
+
+// container
 $(".trap").css({
   "left": trap + "px"
 });
@@ -13,13 +120,24 @@ $(".con-about").css({
   "left": $(window).width() + "px"
 });
 
+$(".con-work").css({
+  "left": $(window).width()*2 + "px"
+});
+
+$(".con-skill").css({
+  "left": $(window).width()*3 + "px"
+});
+
+$(".con-contact").css({
+  "left": $(window).width()*4 + "px"
+});
+// container end
+
 // scroll t-rex
 $(window).scroll(function() {
   const wScroll = $(this).scrollTop()/3;
 
   const titikTengah = $(window).width()/2;
-
-  console.log(wScroll)
 
   // t-rex scroll
   if(wScroll > 30) {
@@ -33,7 +151,7 @@ $(window).scroll(function() {
       });
     }
 
-    if(wScroll%2==0) {
+    if(Math.round(wScroll%2)==0) {
       $("#t-rex img").attr("src", "./assets/img/pixilart-drawing.png");
     } else {
       $("#t-rex img").attr("src", "./assets/img/pixil-frame-0.png");
@@ -68,9 +186,6 @@ $(window).scroll(function() {
       }
 
     }
-
-
-
   }
 });
 
@@ -129,11 +244,43 @@ $(window).scroll(function() {
 
 });
 
+
+// about scroll
 $(window).scroll(function() {
   const wScroll = $(this).scrollTop();
 
   $(".con-about").css({
     "left": $(window).width() - (wScroll/5) + "px",
+    "width": $(window).width() + "px"
+  });
+});
+
+// work scroll
+$(window).scroll(function() {
+  const wScroll = $(this).scrollTop();
+
+  $(".con-work").css({
+    "left": ($(window).width()*2) - (wScroll/5) + "px",
+    "width": $(window).width() + "px"
+  });
+});
+
+// skill scroll
+$(window).scroll(function() {
+  const wScroll = $(this).scrollTop();
+
+  $(".con-skill").css({
+    "left": ($(window).width()*3) - (wScroll/5) + "px",
+    "width": $(window).width() + "px"
+  });
+});
+
+// contact scroll
+$(window).scroll(function() {
+  const wScroll = $(this).scrollTop();
+
+  $(".con-contact").css({
+    "left": ($(window).width()*4) - (wScroll/5) + "px",
     "width": $(window).width() + "px"
   });
 });
