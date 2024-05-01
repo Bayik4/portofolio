@@ -34,9 +34,9 @@ $(window).scroll(function() {
     }
 
     if(wScroll%2==0) {
-      $("#t-rex img").attr("src", "/src/img/pixilart-drawing.png");
+      $("#t-rex img").attr("src", "./assets/img/pixilart-drawing.png");
     } else {
-      $("#t-rex img").attr("src", "/src/img/pixil-frame-0.png");
+      $("#t-rex img").attr("src", "./assets/img/pixil-frame-0.png");
     }
 
     if(wScroll > 700 && wScroll < 900) {
