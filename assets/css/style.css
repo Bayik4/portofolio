@@ -1,233 +1,246 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  height: 27930px;
-  font-family: "Concert One", sans-serif;
+  font-family: "Concert One", "sans-serif";
   font-weight: 400;
   font-style: normal;
-  /* background-color: black; */
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 nav {
-  border: 1px solid black;
+  border-bottom: 4px solid black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 13px;
   position: fixed;
-  z-index: 100;
-  width: 100%;
+  top: 0px;
   background-color: white;
-}
-
-nav ul {
-  list-style: none;
+  z-index: 10;
 }
 
 nav .navbar {
-  width: 500px;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav .navbar-l {
-  width: 100px;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav .navbar a {
-  text-decoration: none;
-  color: black;
-  /* border-bottom: 2px solid black; */
-}
-
-nav .navbar a:after {
-  content: '';
-  width: 0px;
-  height: 2px;
-  display: block;
-  background: black;
-  transition: 300ms;
-}
-
-nav .navbar a:hover:after {
-  width: 100%;
-  cursor: pointer;
-}
-
-.active {
-  border-bottom: 2px solid black;
-}
-
-.container {
-  height: 90vh;
-  width: 100%;
-  position: fixed;
-}
-
-.container .layar {
-  height: 100%;
-  border-bottom: 5px solid black;
-  overflow: hidden;
-  background-color: white;
-}
-
-.container .layar #home {
-  border: 1px solid black;
-}
-
-.container .layar #t-rex {
-  position: absolute;
-  top: 89%;
-  left: 30px;
-}
-
-.container .layar .judul {
-  position: absolute;
-  top: 14%;
-  left: 150px;
-  padding: 10px;
-}
-
-.container .layar .judul h1:nth-child(1) {
-  font-size: 170px;
-  margin: 0px;
-}
-
-.container .layar .judul h1:nth-child(2) {
-  margin-top: -10px;
-  font-size: 50px;
-}
-
-.container .layar .profile {
-  position: absolute;
-  top: 15%;
-  left: 700px;
-  border: 2px dashed black;
-  border-radius: 100%;
-  padding: 4px 4px 0px 4px;
-}
-
-.container .layar .profile img {
-  border: 3px solid black;
-  box-shadow: inset 1px 1px 5px 1px black;
-}
-
-.container .trap {
-  position: absolute;
-  top: 48%;
-}
-
-/* section about */
-.container .layar #about .con-about {
-  height: 100%;
-  background-image: linear-gradient(to right, white 5% , gray);
-  position: absolute;
-  top: -0.5px;
-  border-left: 2px dashed black;
-}
-
-.container .layar #about .con-about .judul-about {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-}
-
-.container .layar #about .con-about .judul-about h1 {
-  font-size: 50px;
-}
-
-.container .layar #about .con-about .deskripsi {
-  position: absolute;
-  top: 30%;
-  left: 12%;
-}
-
-.container .layar #about .con-about .deskripsi p {
-  font-size: 20px;
-}
-
-/* section work */
-.container .layar #work .con-work {
-  height: 100%;
-  position: absolute;
-  top: -0.5px;
-  border-left: 2px dashed black;
-  background-image: linear-gradient(to right, gray , white);
-}
-
-.container .layar #work .con-work .judul-work {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-}
-
-.container .layar #work .con-work .judul-work h1 {
-  font-size: 50px;
-}
-
-.container .layar #work .con-work .con-card {
-  /* border: 1px solid black; */
-  width: 100%;
-  height: 70%;
-  position: relative;
-  top: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 400px;
+  list-style: none;
+  margin-left: 100px;
 }
 
-.container .layar #work .con-work .con-card .card {
-  border: 1px solid black;
-  width: 270px;
-  padding: 8px;
-  margin: 20px 0px 20px 20px;
-  box-shadow: 4px 4px 0px 0px black;
+nav .navbar li a {
+  text-decoration: none;
+  color: black;
 }
 
-.container .layar #work .con-work .con-card .card .img-card {
+nav .navbar-l {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav .navbar-l li {
+  margin: 0px 10px;
+}
+
+nav .navbar-l li a {
+  color: black;
+}
+
+.container #home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.parallax {
+  position: fixed;
+  top: 30px;
+  width: 100vw;
+  z-index: -1;
+}
+
+.container #home .judul-utama h1 {
+  font-size: 130px;
+}
+
+.container #home .judul-utama h2 {
+  font-size: 40px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.container #home .judul-utama p {
+  font-size: 25px;
+}
+
+.container #home .profile {
+  border-radius: 100%;
+  overflow: hidden;
+  /* border: 3px dashed black; */
+  padding: 5px 5px 1px 5px;
+  /* box-shadow: 0px 0px 10px 3px black; */
+}
+
+.container #home .profile img {
+  border-radius: 100%;
+  border: 3px solid transparent;
+  animation: img-border 3s linear infinite;
+
+  /* background: linear-gradient(to top, black, white); */
+
+  /* filter: drop-shadow(0px 0px 5px black); */
+
+  image-resolution: from-image;
+  image-resolution: 300dpi;
+  image-resolution: from-image 300dpi;
+  image-resolution: 300dpi snap;
+
+  image-resolution: inherit;
+  image-resolution: initial;
+  image-resolution: revert;
+  image-resolution: revert-layer;
+  image-resolution: unset;
+}
+
+@keyframes img-border {
+  /* 0% {
+    border-bottom: 3px solid black;
+  } */
+  25% {
+    border-right: 3px dashed black;
+  }
+  50% {
+    border-top: 3px dashed black;
+  }
+  75% {
+    border-left: 3px dashed black;
+  }
+  100% {
+    border-bottom: 3px dashed black;
+  }
+}
+
+.container #about {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 50px; 
+}
+
+.container #about h1.judul {
+  border-bottom: 4px solid white;
+}
+
+.container #about .deskripsi {
+  width: 300px;
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+
+.container #about .deskripsi p {
+  font-size: 25px;
+}
+
+.container #about .con-hobi {
+  width: 400px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  position: relative;
+  top: 80px;
+  left: 30px;
+  border: 2px dashed white;
+}
+
+.container #about .con-hobi h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  border-bottom: 3px solid white;
+  /* width: fit-content; */
+  text-align: center;
+}
+
+.container #about .con-hobi .hobi {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.container #about .con-hobi .hobi ul li {
+  margin: 10px;
+}
+
+.margin-parallax {
+  margin-top: 100vh;
+}
+
+.judul {
+  font-size: 45px;
+  margin: 10px;
+  width: fit-content;
+}
+
+.container #work {
+  height: 100vh;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.container #work h1 {
+  border-bottom: 4px solid black;
+}
+
+.container #work .card-con {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 80px;
+  background-color: white;
+}
+
+.container #work .card-con .card {
+  width: 300px;
+  border: 2px dashed black;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.container #work .card-con .card h1 {
+  text-align: center;
+}
+
+.container #work .card-con .card .card-img {
   width: 100%;
-  height: 170px;
-  box-shadow: inset 0px 0px 5px 3px black;
+  height: 150px;
+  overflow: hidden;
+  text-align: center;
 }
 
-/* section skill */
-.container .layar #skill .con-skill {
-  height: 100%;
-  position: absolute;
-  top: -0.5px;
-  border-left: 2px dashed black;
-  background: linear-gradient(213deg, gray 0%, rgba(255,255,255,1) 50%);
+.container #skill {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  padding: 50px;
 }
 
-.container .layar #skill .con-skill .judul-skill {
-  position: absolute;
-  top: 10%;
-  left: 10%;
+.container #skill h1 {
+  border-bottom: 4px solid white;
 }
 
-.container .layar #skill .con-skill .judul-skill h1 {
-  font-size: 50px;
+.container #contact {
+  height: 100vh;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  padding: 50px;
 }
 
-/* section contact */
-.container .layar #contact .con-contact {
-  height: 100%;
-  position: absolute;
-  top: -0.5px;
-  border-left: 2px dashed black;
-  background: linear-gradient(160deg, gray 0%, rgba(255,255,255,1) 100%);
-}
-
-.container .layar #contact .con-contact .judul-contact {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-}
-
-.container .layar #contact .con-contact .judul-contact h1 {
-  font-size: 50px;
+.container #contact h1 {
+  border-bottom: 4px solid black;
 }
