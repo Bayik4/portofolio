@@ -4,6 +4,29 @@
   font-family: "Concert One", "sans-serif";
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(204, 204, 204);
+  border: 1px dashed black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 nav {
@@ -12,7 +35,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 13px;
+  padding: 8px;
   position: fixed;
   top: 0px;
   background-color: white;
@@ -23,14 +46,39 @@ nav .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 400px;
+  width: 450px;
   list-style: none;
   margin-left: 100px;
+}
+
+nav .navbar li {
+  padding: 10px;
 }
 
 nav .navbar li a {
   text-decoration: none;
   color: black;
+}
+
+.link{
+  position: relative;
+}
+
+.link:after{
+  content: '';
+  position: absolute;
+  width: 0; height: 2px;
+  display: block;
+  right: 0;
+  background: black;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+ 
+.link:hover:after{
+  width: 100%;
+  left: 0;
+  background: black;
 }
 
 nav .navbar-l {
@@ -46,6 +94,10 @@ nav .navbar-l li {
 
 nav .navbar-l li a {
   color: black;
+}
+
+.active {
+  border-bottom: 2px solid black;
 }
 
 .container #home {
@@ -189,6 +241,7 @@ nav .navbar-l li a {
   color: black;
   box-sizing: border-box;
   padding: 50px;
+  display: none;
 }
 
 .container #work h1 {
@@ -219,6 +272,13 @@ nav .navbar-l li a {
   height: 150px;
   overflow: hidden;
   text-align: center;
+  margin: 10px 0px;
+  border: 2px solid black;
+}
+
+.container #work .card-con .card .card-img img {
+  filter: drop-shadow(0px 0px 5px black);
+  width: 100%;
 }
 
 .container #skill {
@@ -239,6 +299,7 @@ nav .navbar-l li a {
   color: black;
   box-sizing: border-box;
   padding: 50px;
+  display: none;
 }
 
 .container #contact h1 {
