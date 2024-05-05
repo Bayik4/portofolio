@@ -179,8 +179,11 @@ nav .navbar-l li a {
   background-color: black;
   color: white;
   height: 100vh;
+  width: 100vw;
   box-sizing: border-box;
-  padding: 50px; 
+  padding: 50px;
+  position: absolute;
+  z-index: 2;
 }
 
 .container #about h1.judul {
@@ -242,6 +245,7 @@ nav .navbar-l li a {
   box-sizing: border-box;
   padding: 50px;
   display: none;
+  z-index: 1;
 }
 
 .container #work h1 {
@@ -261,6 +265,14 @@ nav .navbar-l li a {
   border: 2px dashed black;
   box-sizing: border-box;
   padding: 10px;
+  background-color: white;
+  margin: 10px;
+  transition: 0.3s linear;
+}
+
+.container #work .card-con .card:hover {
+  box-shadow: 5px 5px 5px 1px black;
+  transform: translate(-5px, -5px);
 }
 
 .container #work .card-con .card h1 {
@@ -283,14 +295,45 @@ nav .navbar-l li a {
 
 .container #skill {
   height: 100vh;
+  width: 100vw;
   background-color: black;
   color: white;
   box-sizing: border-box;
   padding: 50px;
+  position: absolute;
+  z-index: 2;
 }
 
-.container #skill h1 {
+.container #skill h1.judul {
   border-bottom: 4px solid white;
+}
+
+.container #skill .con-skill {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 70vh;
+  /* border: 1px solid white; */
+}
+
+.container #skill .con-skill .stick {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px dashed white;
+  width: 250px;
+  box-sizing: border-box;
+  height: 80px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container #skill .con-skill .stick .stick-content {
+  text-align: center;
+  width: 100%;
 }
 
 .container #contact {
@@ -300,8 +343,55 @@ nav .navbar-l li a {
   box-sizing: border-box;
   padding: 50px;
   display: none;
+  z-index: 1;
 }
 
 .container #contact h1 {
   border-bottom: 4px solid black;
+  margin-top: -10px;
 }
+
+.container #contact .con-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.container #contact .con-form form {
+  border: 3px dashed black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  width: 500px;
+}
+
+.container #contact .con-form form .btn {
+  outline: none;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 5px;
+  width: 300px;
+}
+
+.container #contact .con-form form .label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 1px solid black; */
+  margin: 8px 0px;
+  font-size: 20px;
+}
+
+.container #contact .con-form form .label input, textarea {
+  width: 500px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+/* .container #contact .con-form form .label textarea {
+  padding: 5px;
+} */

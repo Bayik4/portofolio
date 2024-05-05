@@ -11,6 +11,10 @@ $("nav").css({
   "width": width + "px"
 })
 
+$("#skill").css({
+  "margin-top": height * 3 + "px"
+});
+
 $(window).scroll(function () { 
   const scroll = $(window).scrollTop();
 
@@ -53,7 +57,7 @@ $(window).scroll(function () {
     $("#awork").removeClass("active");
     $("#askill").removeClass("active");
     $("#acontact").removeClass("active");
-  } else if(scroll >= (height/2) && scroll <= ((height*3)/2)) {
+  } else if(scroll >= ((height)/2) && scroll <= ((height*3)/2)) {
     // about
     $("#ahome").removeClass("active");
     $("#aabout").addClass("active");
@@ -83,7 +87,20 @@ $(window).scroll(function () {
     $("#acontact").addClass("active");
   }
 
-  console.log(scroll)
+  $(".awan").css({
+    // "left": scroll + "px",
+    "z-index": "3",
+    "top": 200 + scroll*2/3 + "px"
+  })
+
+  $(".awan2").css({
+    // "left": scroll + "px",
+    "z-index": "3",
+    "top": 300 + scroll*2/5 + "px"
+  })
+
+
+
 });
 
 
