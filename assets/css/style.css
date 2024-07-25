@@ -7,6 +7,10 @@
   overflow-x: hidden;
 }
 
+body {
+  overflow: hidden;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -31,24 +35,21 @@
 
 nav {
   border-bottom: 4px solid black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 8px;
   position: fixed;
-  top: 0px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
   background-color: white;
-  z-index: 10;
 }
 
 nav .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 450px;
+  width: 50%;
   list-style: none;
-  margin-left: 100px;
 }
 
 nav .navbar li {
@@ -96,8 +97,58 @@ nav .navbar-l li a {
   color: black;
 }
 
+nav .burger-button {
+  width: 30px;
+  height: 30px;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+nav .burger-button .burger {
+  width: 100%;
+  height: 6px;
+  background-color: black;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+nav .burger-button input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  z-index: 2;
+}
+
+nav .burger-button input:checked ~ .burger:nth-child(2) {
+  transform: rotate(51deg) translate(1px);
+  transform-origin: 0;
+}
+
+nav .burger-button input:checked ~ .burger:nth-child(3) {
+  width: 0px;
+}
+
+nav .burger-button input:checked ~ .burger:nth-child(4) {
+  transform: rotate(-51deg);
+  transform-origin: 0;
+}
+
 .active {
   border-bottom: 2px solid black;
+}
+
+.parallax {
+  position: fixed;
+  top: 30px;
+  width: 100%;
 }
 
 .container #home {
@@ -105,13 +156,26 @@ nav .navbar-l li a {
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
 
-.parallax {
-  position: fixed;
-  top: 30px;
-  width: 100vw;
+.container #home::after {
+  content: "";
+  width: 35%;
+  height: 85%;
+  background-color: black;
+  position: absolute;
+  left: 100px;
+  top: 0;
   z-index: -1;
+  /* border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%; */
+}
+
+.container #home .judul-utama {
+  color: white;
+  /* border: 1px solid beige; */
+  overflow: visible;
 }
 
 .container #home .judul-utama h1 {
@@ -129,17 +193,31 @@ nav .navbar-l li a {
 }
 
 .container #home .profile {
-  border-radius: 100%;
+  /* border-radius: 100%; */
   overflow: hidden;
   /* border: 3px dashed black; */
   padding: 5px 5px 1px 5px;
-  /* box-shadow: 0px 0px 10px 3px black; */
+  /* box-shadow: inset 0px 0px 10px 3px black; */
+  /* background-color: black; */
+  margin-top: -90px;
+}
+
+.container #home .profile::before {
+  content: "";
+  width: 350px;
+  height: 370px;
+  background-color: black;
+  position: absolute;
+  z-index: -1;
+  bottom: 115px;
+  right: 270px;
+  filter: drop-shadow(10px 10px 0px rgb(158, 158, 158));
 }
 
 .container #home .profile img {
-  border-radius: 100%;
+  /* border-radius: 100%; */
   border: 3px solid transparent;
-  animation: img-border 3s linear infinite;
+  /* animation: img-border 3s linear infinite; */
 
   /* background: linear-gradient(to top, black, white); */
 
@@ -155,6 +233,8 @@ nav .navbar-l li a {
   image-resolution: revert;
   image-resolution: revert-layer;
   image-resolution: unset;
+
+  filter: drop-shadow(3px -1px 0px black)
 }
 
 @keyframes img-border {
@@ -173,6 +253,29 @@ nav .navbar-l li a {
   100% {
     border-bottom: 3px dashed black;
   }
+}
+
+#hire {
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  background-color: black;
+  color: white;
+  border: 1px dashed white;
+  vertical-align: middle;
+}
+
+#hire:hover {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  /* box-shadow: 0px 0px 0px 0px gray; */
+  box-shadow: 3px 3px 0px 1px rgb(128, 128, 128);
+  transform: translate(-3px, -3px);
+
 }
 
 .container #about {
@@ -202,7 +305,7 @@ nav .navbar-l li a {
 }
 
 .container #about .con-hobi {
-  width: 400px;
+  width: 300px;
   box-sizing: border-box;
   padding: 5px 10px;
   position: relative;
@@ -226,6 +329,94 @@ nav .navbar-l li a {
 
 .container #about .con-hobi .hobi ul li {
   margin: 10px;
+}
+
+.container #about .con-biodata {
+  width: 400px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  position: absolute;
+  top: 140px;
+  left: 430px;
+  border: 2px dashed white;
+}
+
+.container #about .con-biodata h1 {
+  font-size: 25px;
+  margin-bottom: 8px;
+  border-bottom: 3px solid white;
+}
+
+.container #about .con-biodata th {
+  vertical-align: top;
+}
+
+.container #about .con-biodata td {
+  vertical-align: top;
+}
+
+.container #about .con-sosmed {
+  width: 200px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  position: absolute;
+  top: 140px;
+  left: 65%;
+  border: 2px dashed white;
+}
+
+.container #about .con-sosmed h1 {
+  font-size: 25px;
+  margin-bottom: 8px;
+  border-bottom: 3px solid white;
+}
+
+.container #about .con-sosmed .sosmed a {
+  text-decoration: none;
+  color: white;
+}
+
+.container #about .con-sosmed .sosmed a:hover {
+  color: #c7c7c7;
+}
+
+.container #about .con-sosmed th {
+  vertical-align: top;
+  height: 30px;
+  width: 30px;
+}
+
+.container #about .con-sosmed td {
+  vertical-align: top;
+  height: 5px;
+}
+
+.container #about .con-docs {
+  width: 200px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  position: absolute;
+  top: 350px;
+  left: 65%;
+  border: 2px dashed white;
+}
+
+.container #about .con-docs h1 {
+  font-size: 25px;
+  margin-bottom: 8px;
+  border-bottom: 3px solid white;
+}
+
+.container #about .con-docs th {
+  vertical-align: middle;
+  height: 30px;
+  width: 50px;
+  text-align: left;
+}
+
+.container #about .con-docs td {
+  vertical-align: middle;
+  height: 5px;
 }
 
 .margin-parallax {
@@ -324,10 +515,10 @@ nav .navbar-l li a {
   border: 2px dashed white;
   width: 250px;
   box-sizing: border-box;
-  height: 80px;
+  height: 50px;
   width: 300px;
   margin: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   overflow: hidden;
 }
 
@@ -395,3 +586,12 @@ nav .navbar-l li a {
 /* .container #contact .con-form form .label textarea {
   padding: 5px;
 } */
+
+.anchor {
+  text-decoration: none;
+  color: white;
+}
+
+.anchor:hover {
+  color: #cccccc;
+}

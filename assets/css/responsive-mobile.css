@@ -1,0 +1,109 @@
+@media screen and (max-width: 600px) {
+  body {
+    overflow: hidden;
+    display: none;
+  }
+
+  nav {
+    overflow: visible;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav .burger-button {
+    display: flex;
+  }
+
+  nav .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    right: -120px;
+    color: black;
+    /* border: 1px solid black; */
+    width: 100px;
+    transition: 0.5s ease;
+  }
+
+  nav .navbar li a {
+    color: black;
+  }
+
+  .active {
+    border-bottom: 2px solid black;
+  }
+
+  .link:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    display: block;
+    right: 0;
+    background: black;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+   
+  .link:hover:after{
+    width: 100%;
+    left: 0;
+    background: black;
+  }
+
+  /* home */
+  .container #home {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+  
+  .container #home .judul-utama h1 {
+    font-size: 130px;
+  }
+  
+  .container #home .judul-utama h2 {
+    font-size: 40px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+  
+  .container #home .judul-utama p {
+    font-size: 25px;
+  }
+  
+  .container #home .profile {
+    border-radius: 100%;
+    overflow: hidden;
+    /* border: 3px dashed black; */
+    padding: 5px 5px 1px 5px;
+    /* box-shadow: 0px 0px 10px 3px black; */
+  }
+  
+  .container #home .profile img {
+    width: 250px;
+    border-radius: 100%;
+    border: 3px solid transparent;
+    animation: img-border 3s linear infinite;
+  
+    /* background: linear-gradient(to top, black, white); */
+  
+    /* filter: drop-shadow(0px 0px 5px black); */
+  
+    image-resolution: from-image;
+    image-resolution: 300dpi;
+    image-resolution: from-image 300dpi;
+    image-resolution: 300dpi snap;
+  
+    image-resolution: inherit;
+    image-resolution: initial;
+    image-resolution: revert;
+    image-resolution: revert-layer;
+    image-resolution: unset;
+  }
+  
+}

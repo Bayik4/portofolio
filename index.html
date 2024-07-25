@@ -6,6 +6,7 @@
 
     <!-- my style -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive-mobile.css" />
 
     <!-- jquery -->
     <script
@@ -20,107 +21,250 @@
       href="https://fonts.googleapis.com/css2?family=Concert+One&family=Micro+5&display=swap"
       rel="stylesheet"
     />
+    <!-- emailjs -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
     <title>Ayyik Arbail Idia | Portofolio</title>
   </head>
   <body>
     <!-- navbar start -->
-    <nav>
-      <ul class="navbar">
-        <li>
-          <a id="ahome" class="active link" href="#home"
-            ><i class="fa-solid fa-house"></i> Home</a
-          >
-        </li>
-        <li>
-          <a id="aabout" href="#about" class="link"
-            ><i class="fa-solid fa-address-card"></i> About</a
-          >
-        </li>
-        <li>
-          <a id="awork" href="#work" class="link"
-            ><i class="fa-solid fa-laptop-file"></i> Work</a
-          >
-        </li>
-        <li>
-          <a id="askill" href="#skill" class="link"
-            ><i class="fa-solid fa-bolt-lightning"></i> Skill</a
-          >
-        </li>
-        <li>
-          <a id="acontact" href="#contact" class="link"
-            ><i class="fa-solid fa-address-book"></i> Contact</a
-          >
-        </li>
-      </ul>
-      <ul class="navbar-l">
-        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></i></li>
-        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-      </ul>
-    </nav>
-    <!-- navbar end -->
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a id="ahome" class="active link" href="#home"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li>
+            <a id="aabout" href="#about" class="link"
+              ><i class="fa-solid fa-address-card"></i> About</a
+            >
+          </li>
+          <li>
+            <a id="awork" href="#work" class="link"
+              ><i class="fa-solid fa-laptop-file"></i> Work</a
+            >
+          </li>
+          <li>
+            <a id="askill" href="#skill" class="link"
+              ><i class="fa-solid fa-bolt-lightning"></i> Skill</a
+            >
+          </li>
+          <li>
+            <a id="acontact" href="#contact" class="link"
+              ><i class="fa-solid fa-address-book"></i> Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- <ul class="navbar-l">
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></i></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul> -->
+
+        <!-- burger menu -->
+        <div class="burger-button">
+          <input type="checkbox" id="burger-check" />
+          <div class="burger"></div>
+          <div class="burger"></div>
+          <div class="burger"></div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+    </header>
 
     <!-- content start -->
     <div class="container">
-
-      <div class="awan" style="position: absolute; top: 200px; left: 60px; z-index: 1;">
+      <!-- <div class="awan" style="position: absolute; top: 200px; left: 60px; z-index: 1;">
         <img src="./assets/img/awan1.png" alt="" width="150">
       </div>
 
       <div class="awan2" style="position: absolute; top: 300px; left: 500px;">
         <img src="./assets/img/awan2.png" alt="">
-      </div>
+      </div> -->
 
       <!-- home section -->
       <section id="home" class="parallax">
         <div class="judul-utama">
           <h1>Hi!,</h1>
-          <h2>My name is <br>AYYIK ARBAIL IDIA</h2>
+          <h2>My name is <br />AYYIK ARBAIL IDIA</h2>
           <p>I'm is a Programmer</p>
+          <button id="hire"><i class="fa-solid fa-briefcase"></i> Open to Work</button>
         </div>
 
         <div class="profile">
-          <img src="./assets/img/IMG-20231103-WA0009-removebg-preview.png" width="400" alt="">
+          <img
+            src="./assets/img/IMG-20231103-WA0009-removebg-preview.png"
+            width="500"
+            alt=""
+          />
         </div>
       </section>
 
       <!-- about section -->
       <section id="about" class="margin-parallax">
-        <h1 class="judul">
-          About Me
-        </h1>
+        <h1 class="judul">About Me</h1>
 
         <div class="deskripsi">
-          <p>I am a student at Wearnes Education Center Malang majoring in information engineering, class of 2023</p>
+          <p>
+            I am a student at Wearnes Education Center Malang majoring in
+            information engineering, class of 2023/2024
+          </p>
         </div>
 
         <div class="con-hobi">
           <h1>My Hobies</h1>
           <div class="hobi">
-            <ul style="list-style: none;">
+            <ul style="list-style: none">
               <li>
                 <h3><i class="fa-solid fa-camera"></i> Photography</h3>
               </li>
               <li>
-                <h3><i class="fa-solid fa-music"></i> Listen to song</h3>
+                <h3><i class="fa-solid fa-guitar"></i> Playing the Guitar</h3>
+              </li>
+              <li>
+                <h3><i class="fa-solid fa-book"></i> Read a Book</h3>
+              </li>
+              <li>
+                <h3><i class="fa-solid fa-film"></i> Watching Movies</h3>
+              </li>
+              <li>
+                <h3><i class="fa-solid fa-gamepad"></i> Playing Games</h3>
               </li>
             </ul>
           </div>
         </div>
 
+        <div class="con-biodata">
+          <h1>Biodata</h1>
+          <div class="list-biodata">
+            <table>
+              <tr>
+                <th align="left" width="110">Name</th>
+                <td width="10">:</td>
+                <td>Ayyik Arba'il Idia</td>
+              </tr>
+              <tr>
+                <th align="left">Date of Birth</th>
+                <td>:</td>
+                <td>November 17, 2004</td>
+              </tr>
+              <tr>
+                <th align="left">Gender</th>
+                <td>:</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <th align="left">Citizenship</th>
+                <td>:</td>
+                <td>Indonesian Citizens</td>
+              </tr>
+              <tr>
+                <th align="left">Religion</th>
+                <td>:</td>
+                <td>Islam</td>
+              </tr>
+              <tr>
+                <th align="left">Phone</th>
+                <td>:</td>
+                <td>085706076048</td>
+              </tr>
+              <tr>
+                <th align="left">Email</th>
+                <td>:</td>
+                <td>ayikarbail@gmail.com</td>
+              </tr>
+              <tr>
+                <th align="left">Address</th>
+                <td>:</td>
+                <td>
+                  Jl. Raya Candi VA No. 392A Karangbesuki, Kec. Sukun, Kota
+                  Malang, Jawa Timur
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
 
+        <div class="con-sosmed">
+          <h1>Social Media</h1>
+          <div class="sosmed">
+            <table>
+              <tr>
+                <th>
+                  <i class="fa-brands fa-instagram"></i>
+                </th>
+                <td>
+                  <a target="_blank"
+                    href="https://www.instagram.com/arbail.ayik?igsh=a25hcjhyc2I4NmIz"
+                    >@arbail.ayik</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><i class="fa-brands fa-linkedin"></i></th>
+                <td>
+                  <a target="_blank"
+                    href="https://www.linkedin.com/in/ayyik-arbail-idia-399731288"
+                    >Ayyik Arbail Idia</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><i class="fa-brands fa-x-twitter"></i></th>
+                <td>
+                  <a target="_blank"
+                    href="https://x.com/AArbail12?t=9nhM8mRpynEv3S-UR-l_ow&s=09"
+                    >@AArbail12</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th><i class="fa-brands fa-whatsapp"></i></th>
+                <td>
+                  <a target="_blank"
+                    href="https://wa.me/6284706076048"
+                    >085706076048</a
+                  >
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="con-docs">
+          <h1>Document</h1>
+          <div class="docs">
+            <table>
+              <tr>
+                <th>CV</th>
+                <td>
+                  <a
+                    href="./assets/docs/CV. Ayyik Arbail Idia.pdf"
+                    download="CV. Ayyik Arbail Idia.pdf"
+                    class="anchor"
+                    ><i class="fa-solid fa-file-arrow-down"></i> Download</i
+                  ></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </section>
 
       <!-- work section -->
       <section id="work" class="parallax">
-        <h1 class="judul">
-          My Work
-        </h1>
+        <h1 class="judul">My Work</h1>
 
         <div class="card-con">
           <div class="card">
             <h1>Web Cahsier App</h1>
             <div class="card-img">
-              <img src="./assets/img/Screenshot (48).png" width="250" alt="">
+              <img src="./assets/img/Screenshot (48).png" width="250" alt="" />
             </div>
             <div class="card-content">
               <p>I made a web-based cashier application</p>
@@ -130,25 +274,28 @@
           <div class="card">
             <h1>Search Movie API</h1>
             <div class="card-img">
-              <img src="./assets/img/Screenshot (13).png" width="250" alt="">
+              <img src="./assets/img/Screenshot (13).png" width="250" alt="" />
             </div>
             <div class="card-content">
-              <p>I created a website to search for a film whose data is taken from an API</p>
+              <p>
+                I created a website to search for a film whose data is taken
+                from an API
+              </p>
             </div>
           </div>
 
           <div class="card">
-            <h1>Search Movie API</h1>
+            <h1>Website Jadi Trip</h1>
             <div class="card-img">
-              <img src="./assets/img/Screenshot (13).png" width="250" alt="">
+              <img src="./assets/img/Screenshot (61).png" width="250" alt="" />
             </div>
             <div class="card-content">
-              <p>I created a website to search for a film whose data is taken from an API</p>
+              <p>
+                I contributed to the creation of the <a target="_blank" href="http://www.jaditrip.com">Jadi Trip</a> website as a Programmer
+              </p>
             </div>
           </div>
-
         </div>
-
       </section>
 
       <!-- skill section -->
@@ -156,66 +303,119 @@
         <h1 class="judul">My Skill</h1>
 
         <div class="con-skill">
-
           <div class="stick">
             <div class="stick-content">
-              <h1>HTML</h1>
+              <span style="display: flex; justify-content: center; align-items: center;">
+                <i class="fa-brands fa-html5" style="font-size: 30px; margin-right: 10px;"></i>
+                <h1>HTML</h1>
+              </span>
             </div>
           </div>
 
           <div class="stick">
             <div class="stick-content">
-              <h1>CSS</h1>
+              <span style="display: flex; justify-content: center; align-items: center;">
+                <i class="fa-brands fa-css3-alt" style="font-size: 30px; margin-right: 10px;"></i>
+                <h1>CSS</h1>
+              </span>
             </div>
           </div>
 
           <div class="stick">
             <div class="stick-content">
-              <h1>JavaScript</h1>
+              <span style="display: flex; justify-content: center; align-items: center;">
+                <i class="fa-brands fa-js" style="font-size: 30px; margin-right: 10px;"></i>
+                <h1>JavaScript</h1>
+              </span>
             </div>
           </div>
 
           <div class="stick">
             <div class="stick-content">
-              <h1>PHP</h1>
+              <span style="display: flex; justify-content: center; align-items: center;">
+                <i class="fa-brands fa-php" style="font-size: 30px; margin-right: 10px;"></i>
+                <h1>PHP</h1>
+              </span>
             </div>
           </div>
 
           <div class="stick">
             <div class="stick-content">
-              <h1>laravel</h1>
+              <span style="display: flex; justify-content: center; align-items: center;">
+                <i class="fa-brands fa-laravel" style="font-size: 30px; margin-right: 10px;"></i>
+                <h1>Laravel</h1>
+              </span>
             </div>
           </div>
 
           <div class="stick">
             <div class="stick-content">
-              <h1>Bootsrap</h1>
+              <span style="display: flex; justify-content: center; align-items: center;">
+                <i class="fa-brands fa-bootstrap" style="font-size: 30px; margin-right: 10px;"></i>
+                <h1>Bootstrap</h1>
+              </span>
             </div>
           </div>
 
+          <div class="stick">
+            <div class="stick-content">
+              <span style="display: flex; justify-content: center; align-items: center;">
+                <i class="fa-brands fa-node-js" style="font-size: 30px; margin-right: 10px;"></i>
+                <h1>NodeJs</h1>
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- contact section -->
       <section id="contact" class="parallax">
-
         <div class="con-form">
-          <form action="" method="post">
+          <form action="" method="post" id="contact-form">
             <h1 class="judul">Contact Me</h1>
+            <input
+              type="hidden"
+              name="to_name"
+              id="to_name"
+              value="Ayyik Arbail Idia"
+            />
 
             <div class="label">
               <label for="name">Name</label>
-              <input type="text" name="name" id="name" placeholder="Enter your name">
+              <input
+                type="text"
+                name="from_name"
+                id="from_name"
+                placeholder="Enter your name"
+              />
             </div>
             <div class="label">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Enter your email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+              />
             </div>
             <div class="label">
               <label for="message">Message</label>
-              <textarea name="message" id="message" cols="80" rows="6" placeholder="Your message"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                cols="80"
+                rows="6"
+                placeholder="Your message"
+              ></textarea>
             </div>
-            <button type="submit" name="submit" class="btn">Send</button>
+            <button
+              type="submit"
+              name="submit"
+              class="btn"
+              style="cursor: pointer"
+            >
+              Send
+            </button>
           </form>
         </div>
       </section>
@@ -228,5 +428,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script-navbar.js"></script>
+    <script src="./assets/js/emailjs.js"></script>
   </body>
 </html>

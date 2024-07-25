@@ -7,9 +7,9 @@ $("body").css({
 
 
 // navbar 
-$("nav").css({
-  "width": width + "px"
-})
+// $("nav").css({
+//   "width": width + "px"
+// })
 
 $("#skill").css({
   "margin-top": height * 3 + "px"
@@ -167,4 +167,11 @@ $("#acontact").click(function(event) {
   $("#awork").removeClass("active");
   $("#askill").removeClass("active");
   $(this).addClass("active");
+});
+
+$("#hire").click(function(event) {
+  event.preventDefault();
+  $('html,body').animate({
+    scrollTop: (height*4)
+  }, 'slow');
 });
