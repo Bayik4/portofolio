@@ -9,9 +9,9 @@ checkBox.addEventListener('click', () => {
     document.querySelector('nav .navbar').style.right = "0px";
     document.addEventListener('click', (event) => {
       // document.querySelector('nav .navbar').style.right = "-120px";
-      if(event.target != "ul.navbar") {
-        alert('oke')
-      }
+      // if(event.target != "ul.navbar") {
+      //   alert('oke')
+      // }
       console.log(event);
     });
   } else {
