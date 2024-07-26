@@ -215,6 +215,7 @@
 
   .container #work {
     padding: 10px;
+    height: 100vh;
   }
 
   .container #work h1.judul {
