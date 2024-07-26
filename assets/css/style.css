@@ -194,47 +194,34 @@ nav .burger-button input:checked ~ .burger:nth-child(4) {
 
 .container #home .profile {
   /* border-radius: 100%; */
-  overflow: hidden;
+  /* width: fit-content; */
+  overflow: visible;
   /* border: 3px dashed black; */
   padding: 5px 5px 1px 5px;
   /* box-shadow: inset 0px 0px 10px 3px black; */
   /* background-color: black; */
   margin-top: -90px;
+  position: relative;
 }
 
 .container #home .profile::before {
   content: "";
-  width: 350px;
-  height: 370px;
-  background-color: black;
   position: absolute;
-  z-index: -1;
-  bottom: 115px;
-  right: 270px;
-  filter: drop-shadow(10px 10px 0px rgb(158, 158, 158));
+  bottom: 0;
+  left: 65px;
+  background: black;
+  padding: 5px;
+  width: 70%;
+  height: 70%;
+  filter: drop-shadow(10px 10px 0px gray);
 }
 
 .container #home .profile img {
-  /* border-radius: 100%; */
-  border: 3px solid transparent;
-  /* animation: img-border 3s linear infinite; */
 
-  /* background: linear-gradient(to top, black, white); */
+  /* border: 1px solid black; */
+  padding: 0;
 
-  /* filter: drop-shadow(0px 0px 5px black); */
-
-  image-resolution: from-image;
-  image-resolution: 300dpi;
-  image-resolution: from-image 300dpi;
-  image-resolution: 300dpi snap;
-
-  image-resolution: inherit;
-  image-resolution: initial;
-  image-resolution: revert;
-  image-resolution: revert-layer;
-  image-resolution: unset;
-
-  filter: drop-shadow(3px -1px 0px black)
+  filter: drop-shadow(2px 0px 0px white);
 }
 
 @keyframes img-border {
@@ -288,6 +275,12 @@ nav .burger-button input:checked ~ .burger:nth-child(4) {
   position: absolute;
   z-index: 2;
 }
+
+.mobile-about {
+  display: none;
+}
+
+/* about */
 
 .container #about h1.judul {
   border-bottom: 4px solid white;
@@ -439,7 +432,11 @@ nav .burger-button input:checked ~ .burger:nth-child(4) {
   z-index: 1;
 }
 
-.container #work h1 {
+#mobile-work {
+  display: none;
+}
+
+.container #work h1.judul {
   border-bottom: 4px solid black;
 }
 
@@ -449,6 +446,7 @@ nav .burger-button input:checked ~ .burger:nth-child(4) {
   align-items: center;
   margin-top: 80px;
   background-color: white;
+  flex-wrap: wrap;
 }
 
 .container #work .card-con .card {
@@ -505,7 +503,6 @@ nav .burger-button input:checked ~ .burger:nth-child(4) {
   align-items: center;
   flex-wrap: wrap;
   height: 70vh;
-  /* border: 1px solid white; */
 }
 
 .container #skill .con-skill .stick {
