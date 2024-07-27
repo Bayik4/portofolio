@@ -15,6 +15,6 @@ checkBox.addEventListener('click', () => {
       console.log(event);
     });
   } else {
-    document.querySelector('nav .navbar').style.right = "-120px";
+    document.querySelector('nav .navbar').style.right = "-170px";
   }
 });

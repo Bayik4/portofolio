@@ -17,15 +17,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     z-index: 5;
-    right: -120px;
+    right: -170px;
     color: black;
     /* border: 1px solid black; */
-    width: 100px;
+    width: 150px;
     transition: 0.5s ease;
     background-color: white;
+    margin-top: 5px;
   }
 
   nav .navbar li a {
@@ -215,7 +217,7 @@
 
   .container #work {
     padding: 10px;
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .container #work h1.judul {
@@ -235,6 +237,7 @@
     /* border: 1px solid black; */
     margin-top: 10px;
     height: 80vh;
+    margin-bottom: 80px;
   }
 
   .container #work #mobile-work .card-con .card {
