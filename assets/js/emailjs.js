@@ -12,9 +12,25 @@ window.onload = function() {
       emailjs.sendForm('service_jiimz0i', 'template_37dt67t', this)
           .then((res) => {
               if(res.status == 200) {
-                alert('Success Send Email');
+                // alert('Success Send Email');
+                Swal.fire({
+                  title: "Success",
+                  text: "The email has been sent",
+                  icon: "success"
+                });
+
+                setTimeout(() => {
+                  document.getElementById("from_name").value = "";
+                  document.getElementById("email").value = "";
+                  document.getElementById("message").value = "";
+                }, 5000);
               } else {
-                alert('Gagal mengirim email '+res.text);
+                // alert('Gagal mengirim email '+res.text);
+                Swal.fire({
+                  title: "Failed",
+                  text: "Email failed to send",
+                  icon: "error"
+                });
               }
           }, (error) => {
               alert('FAILED...', error);

@@ -4,23 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- bootstrap 5.2.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- boostrap icon 1.11.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
     <!-- my style -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/responsive-mobile.css" />
 
-    <!-- jquery -->
-    <script
-      src="https://kit.fontawesome.com/474ce00eb4.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Micro+5&display=swap"
-      rel="stylesheet"
-    />
     <!-- emailjs -->
     <script
       type="text/javascript"
@@ -30,645 +28,642 @@
     <title>Ayyik Arbail Idia | Portofolio</title>
   </head>
   <body>
-    <!-- navbar start -->
-    <header>
-      <nav>
-        <ul class="navbar">
-          <li>
-            <a id="ahome" class="active link" href="#home"
-              ><i class="fa-solid fa-house"></i> Home</a
-            >
-          </li>
-          <li>
-            <a id="aabout" href="#about" class="link"
-              ><i class="fa-solid fa-address-card"></i> About</a
-            >
-          </li>
-          <li>
-            <a id="awork" href="#work" class="link"
-              ><i class="fa-solid fa-laptop-file"></i> Work</a
-            >
-          </li>
-          <li>
-            <a id="askill" href="#skill" class="link"
-              ><i class="fa-solid fa-bolt-lightning"></i> Skill</a
-            >
-          </li>
-          <li>
-            <a id="acontact" href="#contact" class="link"
-              ><i class="fa-solid fa-address-book"></i> Contact</a
-            >
-          </li>
-        </ul>
-
-        <!-- <ul class="navbar-l">
-          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></i></li>
-          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul> -->
-
-        <!-- burger menu -->
-        <div class="burger-button">
-          <input type="checkbox" id="burger-check" />
-          <div class="burger"></div>
-          <div class="burger"></div>
-          <div class="burger"></div>
+    <!-- navbar -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#hero">Portofolio</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#hero"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#project">Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./blogs/index.html" target="_blank"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#certifications">Certifiations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
-      <!-- navbar end -->
-    </header>
+    </div>
 
-    <!-- content start -->
-    <div class="container">
-      <!-- <div class="awan" style="position: absolute; top: 200px; left: 60px; z-index: 1;">
-        <img src="./assets/img/awan1.png" alt="" width="150">
+    <!-- hero section -->
+    <section id="hero" class="pt-5">
+      <div class="container">
+        <div class="row d-flex">
+          <div
+            class="col-md-6 d-flex justify-content-center order-2 order-lg-1"
+          >
+            <div
+              class="container d-flex flex-column justify-content-space-around p-5"
+            >
+              <h1 class="display-1 fw-semibold pt-lg-5">
+                Hello, <br />
+                I'm Ayyik
+              </h1>
+              <p class="mt-3">
+                I am a fresh graduate from Wearnes Education Center with a 1st
+                Diploma in Informatics Engineering. I have a strong interest in
+                Web Development and have worked on several projects that
+                showcase my abilities in this field.
+              </p>
+              <div
+                class="container-fluid d-flex justify-content-start gap-3 ps-0 mt-2"
+              >
+                <a
+                  href="./assets/docs/CV Ayyik Arbail Idia.pdf"
+                  target="_blank"
+                  download="CV Ayyik Arbail Idia.pdf"
+                  class="btn btn-md btn-dark w-100"
+                >
+                  Download CV<i class="bi bi-download ps-2 pe-2 fw-bold"></i>
+                </a>
+                <div class="container-fluid">
+                  <a
+                    href="https://www.linkedin.com/in/ayyik-arbail-idia-399731288"
+                    target="_blank"
+                    class="btn btn-md btn-light"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/arbail.ayik?igsh=a25hcjhyc2I4NmIz"
+                    target="_blank"
+                    class="btn btn-md btn-light"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a
+                    href="https://github.com/Bayik4"
+                    target="_blank"
+                    class="btn btn-md btn-light"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-6 order-1 order-lg-2 d-flex justify-content-center align-items-center pt-5"
+          >
+            <div class="card text-bg-light" id="photo-profile">
+              <img
+                style="
+                  filter: drop-shadow(2px 0px 0px black);
+                  box-shadow: inset 0px -1px 5px 0px black;
+                "
+                src="./assets/img/IMG-20231103-WA0009-removebg-preview.png"
+                class="card-img-top"
+                alt="ayyik arbail idia photo"
+              />
+              <div class="card-body text-center p-0">
+                <p class="mt-2">Programmer | Web Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="awan2" style="position: absolute; top: 300px; left: 500px;">
-        <img src="./assets/img/awan2.png" alt="">
-      </div> -->
+    <!-- about section -->
+    <section id="about" style="padding-top: 50px">
+      <div class="container">
+        <h2 class="display-2 border-bottom">About Me</h2>
 
-      <!-- home section -->
-      <section id="home" class="parallax">
-        <div class="judul-utama">
-          <h1>Hi!,</h1>
-          <h2>My name is <br />AYYIK ARBAIL IDIA</h2>
-          <p>I'm is a Programmer</p>
-          <button id="hire"><i class="fa-solid fa-briefcase"></i> Open to Work</button>
+        <div class="container">
+          <p class="p-2">
+            I graduated from Wearnes Education Center with a 1st Diploma in
+            Informatics Engineering. During my studies, I was involved in
+            internships, which helped me develop skills in Web Development.
+          </p>
+
+          <div class="row d-flex justify-content-between">
+            <!-- experience -->
+            <div
+              class="col-md-6 d-flex align-items-center flex-column mt-5 border-start border-end"
+            >
+              <h3 class="display-6">My main experiences include</h3>
+              <div class="container d-flex flex-column gap-3">
+                <!-- internship -->
+                <div class="card text-bg-light">
+                  <div class="card-header">
+                    <h4>Internships</h4>
+                  </div>
+                  <div class="card-body d-flex flex-column gap-2">
+                    <!-- gm academy -->
+                    <div class="card text-bg-light overflow-hidden">
+                      <div
+                        class="card-header d-flex justify-content-between"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#gmacademy"
+                        aria-expanded="false"
+                        aria-controls="gmacademy"
+                        style="cursor: pointer"
+                      >
+                        GM Academy <i class="bi bi-caret-down-fill"></i>
+                      </div>
+                      <div class="collapse" id="gmacademy">
+                        <div class="card-body">
+                          <p>
+                            During my internship at GM Academy I was placed in
+                            the position of Blog and Web Development, I was
+                            given the task of developing an SEO friendly website
+                            while optimizing the blog.
+                          </p>
+
+                          <ul>
+                            <li>SEO(Search Engine Optimization)</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end -->
+                  </div>
+                </div>
+
+                <!-- final year project -->
+                <div class="card text-bg-light">
+                  <div class="card-header">
+                    <h4>Final Year Project</h4>
+                  </div>
+                  <div class="card-body d-flex flex-column gap-2">
+                    <!-- jaditrip -->
+                    <div class="card text-bg-light overflow-hidden">
+                      <div
+                        class="card-header d-flex justify-content-between"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#jaditrip"
+                        aria-expanded="false"
+                        aria-controls="jaditrip"
+                        style="cursor: pointer"
+                      >
+                        Website Jadi Trip<i class="bi bi-caret-down-fill"></i>
+                      </div>
+                      <div class="collapse" id="jaditrip">
+                        <div class="card-body">
+                          <p>
+                            My final college project is to create a website that
+                            provides car rental services, travel guides and tour
+                            packages called "<a
+                              target="_blank"
+                              href="https://www.jaditrip.com"
+                              >Jadi Trip</a
+                            >". My 3 friends and I created this website because
+                            we wanted to apply the SEO knowledge we got from our
+                            internship.
+                          </p>
+
+                          <ul>
+                            <li>SEO(Search Engine Optimization)</li>
+                            <li>Laravel 10.x</li>
+                            <li>JavaScript</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- skils -->
+            <div
+              class="col-md-5 d-flex align-items-center flex-column mt-5 border-start border-end"
+            >
+              <h3 class="display-6">My key skills include</h3>
+
+              <div class="container">
+                <div class="card text-bg-light">
+                  <div class="card-body p-3">
+                    <div class="row">
+                      <div class="col-6 d-flex flex-column gap-2">
+                        <div class="card text-bg-light">
+                          <div class="card-header">HTML</div>
+                        </div>
+                        <div class="card text-bg-light">
+                          <div class="card-header">CSS</div>
+                        </div>
+                        <div class="card text-bg-light">
+                          <div class="card-header">JavaScript</div>
+                        </div>
+                        <div class="card text-bg-light">
+                          <div class="card-header">PHP</div>
+                        </div>
+                      </div>
+                      <div class="col-6 d-flex flex-column gap-2">
+                        <div class="card text-bg-light">
+                          <div class="card-header">Laravel</div>
+                        </div>
+                        <div class="card text-bg-light">
+                          <div class="card-header">Bootstrap</div>
+                        </div>
+                        <div class="card text-bg-light">
+                          <div class="card-header">MySQL</div>
+                        </div>
+                        <div class="card text-bg-light">
+                          <div class="card-header">NodeJs</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="profile">
-            <img
-              src="./assets/img/IMG-20231103-WA0009-removebg-preview.png"
-              width="500"
-              alt=""
-            />
-          </div>
-      </section>
-
-      <!-- about section -->
-      <section id="about" class="margin-parallax">
-        <h1 class="judul">About Me</h1>
-
-        <div class="desktop-about" style="overflow: visible;">
-          <div class="deskripsi">
-            <p>
-              I am a student at Wearnes Education Center Malang majoring in
-              information engineering, class of 2023/2024
-            </p>
-          </div>
-
-          <div class="con-hobi">
-          <h1>My Hobies</h1>
-            <div class="hobi">
-              <ul style="list-style: none">
-                <li>
-                  <h3><i class="fa-solid fa-camera"></i> Photography</h3>
-                </li>
-                <li>
-                  <h3><i class="fa-solid fa-guitar"></i> Playing the Guitar</h3>
-                </li>
-                <li>
-                  <h3><i class="fa-solid fa-book"></i> Read a Book</h3>
-                </li>
-                <li>
-                  <h3><i class="fa-solid fa-film"></i> Watching Movies</h3>
-                </li>
-                <li>
-                  <h3><i class="fa-solid fa-gamepad"></i> Playing Games</h3>
-                </li>
-              </ul>
-            </div>
-          </div>
-  
-          <div class="con-biodata">
-            <h1>Biodata</h1>
-            <div class="list-biodata">
-              <table>
-                <tr>
-                  <th align="left" width="110">Name</th>
-                  <td width="10">:</td>
-                  <td>Ayyik Arba'il Idia</td>
-                </tr>
-                <tr>
-                  <th align="left">Date of Birth</th>
-                  <td>:</td>
-                  <td>November 17, 2004</td>
-                </tr>
-                <tr>
-                  <th align="left">Gender</th>
-                  <td>:</td>
-                  <td>Male</td>
-                </tr>
-                <tr>
-                  <th align="left">Citizenship</th>
-                  <td>:</td>
-                  <td>Indonesian Citizens</td>
-                </tr>
-                <tr>
-                  <th align="left">Religion</th>
-                  <td>:</td>
-                  <td>Islam</td>
-                </tr>
-                <tr>
-                  <th align="left">Phone</th>
-                  <td>:</td>
-                  <td>085706076048</td>
-                </tr>
-                <tr>
-                  <th align="left">Email</th>
-                  <td>:</td>
-                  <td>ayikarbail@gmail.com</td>
-                </tr>
-                <tr>
-                  <th align="left">Address</th>
-                  <td>:</td>
-                  <td>
-                    Jl. Raya Candi VA No. 392A Karangbesuki, Kec. Sukun, Kota
-                    Malang, Jawa Timur
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-  
-          <div class="con-sosmed">
-            <h1>Social Media</h1>
-            <div class="sosmed">
-              <table>
-                <tr>
-                  <th>
-                    <i class="fa-brands fa-instagram"></i>
-                  </th>
-                  <td>
-                    <a target="_blank"
-                      href="https://www.instagram.com/arbail.ayik?igsh=a25hcjhyc2I4NmIz"
-                      >@arbail.ayik</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th><i class="fa-brands fa-linkedin"></i></th>
-                  <td>
-                    <a target="_blank"
-                      href="https://www.linkedin.com/in/ayyik-arbail-idia-399731288"
-                      >Ayyik Arbail Idia</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th><i class="fa-brands fa-x-twitter"></i></th>
-                  <td>
-                    <a target="_blank"
-                      href="https://x.com/AArbail12?t=9nhM8mRpynEv3S-UR-l_ow&s=09"
-                      >@AArbail12</a
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <th><i class="fa-brands fa-whatsapp"></i></th>
-                  <td>
-                    <a target="_blank"
-                      href="https://wa.me/6284706076048"
-                      >085706076048</a
-                    >
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-  
-          <div class="con-docs">
-            <h1>Document</h1>
-            <div class="docs">
-              <table>
-                <tr>
-                  <th>CV</th>
-                  <td>
+    <!-- project portofolio -->
+    <section id="project" style="padding-top: 50px">
+      <div class="container">
+        <h2 class="display-2 border-bottom">Project Portofolio</h2>
+        <div class="container mt-3 d-flex justify-content-center">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide w-75"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card text-bg-light">
+                  <img
+                    src="./assets/img/Screenshot (61).png"
+                    class="card-img-top"
+                    alt="jaditrip home page"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      This project was part of internship aimed at Digital
+                      Marketing and Search Engine Optimization(SEO). I used
+                      Laravel to develop this project.
+                    </p>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="https://www.jaditrip.com/">Click here</a> for demo.
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card text-bg-light">
+                  <img
+                    src="./assets/img/Screenshot (62).png"
+                    class="card-img-top"
+                    alt="pyramid generator"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      this is practice project, i learn fundamental programming
+                      concepts in JavaScript by coding my own Pyramid Generator.
+                      I learn how to work with arrays, strings, functions,
+                      loops, if/else statements, and more.
+                    </p>
+                  </div>
+                  <div class="card-footer text-center">
                     <a
-                      href="./assets/docs/CV. Ayyik Arbail Idia.pdf"
-                      download="CV. Ayyik Arbail Idia.pdf"
-                      class="anchor"
-                      ><i class="fa-solid fa-file-arrow-down"></i> Download</i
-                    ></a>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- mobile view -->
-        <div class="mobile-about">
-          <div class="deskripsi">
-            <p>
-              I am a student at Wearnes Education Center Malang majoring in
-              information engineering, class of 2023/2024
-            </p>
-          </div>
-
-          <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="30"
-      centered-slides="true" autoplay-delay="2000" autoplay-disable-on-interaction="false" loop="true">
-            <swiper-slide>
-              <div class="con-hobi">
-                <h1>My Hobies</h1>
-                <div class="hobi">
-                  <ul style="list-style: none">
-                    <li>
-                      <h3><i class="fa-solid fa-camera"></i> Photography</h3>
-                    </li>
-                    <li>
-                      <h3><i class="fa-solid fa-guitar"></i> Playing the Guitar</h3>
-                    </li>
-                    <li>
-                      <h3><i class="fa-solid fa-book"></i> Read a Book</h3>
-                    </li>
-                    <li>
-                      <h3><i class="fa-solid fa-film"></i> Watching Movies</h3>
-                    </li>
-                    <li>
-                      <h3><i class="fa-solid fa-gamepad"></i> Playing Games</h3>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="con-biodata">
-                <h1>Biodata</h1>
-                <div class="list-biodata">
-                  <table>
-                    <tr>
-                      <th align="left" width="110">Name</th>
-                      <td width="10">:</td>
-                      <td>Ayyik Arba'il Idia</td>
-                    </tr>
-                    <tr>
-                      <th align="left">Date of Birth</th>
-                      <td>:</td>
-                      <td>November 17, 2004</td>
-                    </tr>
-                    <tr>
-                      <th align="left">Gender</th>
-                      <td>:</td>
-                      <td>Male</td>
-                    </tr>
-                    <tr>
-                      <th align="left">Citizenship</th>
-                      <td>:</td>
-                      <td>Indonesian Citizens</td>
-                    </tr>
-                    <tr>
-                      <th align="left">Religion</th>
-                      <td>:</td>
-                      <td>Islam</td>
-                    </tr>
-                    <tr>
-                      <th align="left">Phone</th>
-                      <td>:</td>
-                      <td>085706076048</td>
-                    </tr>
-                    <tr>
-                      <th align="left">Email</th>
-                      <td>:</td>
-                      <td>ayikarbail@gmail.com</td>
-                    </tr>
-                    <tr>
-                      <th align="left">Address</th>
-                      <td>:</td>
-                      <td>
-                        Jl. Raya Candi VA No. 392A Karangbesuki, Kec. Sukun, Kota
-                        Malang, Jawa Timur
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="con-sosmed">
-                <h1>Social Media</h1>
-                <div class="sosmed">
-                  <table>
-                    <tr>
-                      <th>
-                        <i class="fa-brands fa-instagram"></i>
-                      </th>
-                      <td>
-                        <a target="_blank"
-                          href="https://www.instagram.com/arbail.ayik?igsh=a25hcjhyc2I4NmIz"
-                          >@arbail.ayik</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <th><i class="fa-brands fa-linkedin"></i></th>
-                      <td>
-                        <a target="_blank"
-                          href="https://www.linkedin.com/in/ayyik-arbail-idia-399731288"
-                          >Ayyik Arbail Idia</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <th><i class="fa-brands fa-x-twitter"></i></th>
-                      <td>
-                        <a target="_blank"
-                          href="https://x.com/AArbail12?t=9nhM8mRpynEv3S-UR-l_ow&s=09"
-                          >@AArbail12</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <th><i class="fa-brands fa-whatsapp"></i></th>
-                      <td>
-                        <a target="_blank"
-                          href="https://wa.me/6284706076048"
-                          >085706076048</a
-                        >
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="con-docs">
-                <h1>Document</h1>
-                <div class="docs">
-                  <table>
-                    <tr>
-                      <th>CV</th>
-                      <td>
-                        <a
-                          href="./assets/docs/CV. Ayyik Arbail Idia.pdf"
-                          download="CV. Ayyik Arbail Idia.pdf"
-                          class="anchor"
-                          ><i class="fa-solid fa-file-arrow-down"></i> Download</i
-                        ></a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </swiper-slide>
-          </swiper-container>
-        </div>
-      </section>
-
-      <!-- work section -->
-      <section id="work" class="parallax">
-        <h1 class="judul">My Work</h1>
-
-        <div id="desktop-work">
-          <div class="card-con">
-            <div class="card">
-              <h1>Web Cahsier App</h1>
-              <div class="card-img">
-                <img src="./assets/img/Screenshot (48).png" width="250" alt="" />
-              </div>
-              <div class="card-content">
-                <p>I made a web-based cashier application</p>
-              </div>
-            </div>
-  
-            <div class="card">
-              <h1>Search Movie API</h1>
-              <div class="card-img">
-                <img src="./assets/img/Screenshot (13).png" width="250" alt="" />
-              </div>
-              <div class="card-content">
-                <p>
-                  I created a website to search for a film whose data is taken
-                  from an API
-                </p>
-              </div>
-            </div>
-  
-            <div class="card">
-              <h1>Website Jadi Trip</h1>
-              <div class="card-img">
-                <img src="./assets/img/Screenshot (61).png" width="250" alt="" />
-              </div>
-              <div class="card-content">
-                <p>
-                  I contributed to the creation of the <a target="_blank" href="http://www.jaditrip.com">Jadi Trip</a> website as a Programmer
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="mobile-work">
-          <div class="card-con">
-            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="20"
-              centered-slides="true" autoplay-delay="2000" autoplay-disable-on-interaction="false" loop="true">
-              <swiper-slide>
-                <div class="card">
-                  <h1>Web Cahsier App</h1>
-                  <div class="card-img">
-                    <img src="./assets/img/Screenshot (48).png" width="250" alt="" />
-                  </div>
-                  <div class="card-content">
-                    <p>I made a web-based cashier application</p>
+                      href="./assets/projects/pyramid-generator/index.html"
+                      target="_blank"
+                      >Click here</a
+                    >
+                    for demo.
                   </div>
                 </div>
-
-                <div class="card">
-                  <h1>Search Movie API</h1>
-                  <div class="card-img">
-                    <img src="./assets/img/Screenshot (13).png" width="250" alt="" />
-                  </div>
-                  <div class="card-content">
-                    <p>
-                      I created a website to search for a film whose data is taken
-                      from an API
+              </div>
+              <div class="carousel-item">
+                <div class="card text-bg-light">
+                  <img
+                    src="./assets/img/Screenshot (63).png"
+                    class="card-img-top"
+                    alt="role playing game"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      this is practice project, i learn fundamental programming
+                      concepts in JavaScript by coding my own Role Playing Game.
+                      I learn how to work with arrays, strings, functions,
+                      loops, if/else statements, and more.
                     </p>
                   </div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="card">
-                  <h1>Search Movie API</h1>
-                  <div class="card-img">
-                    <img src="./assets/img/Screenshot (13).png" width="250" alt="" />
+                  <div class="card-footer text-center">
+                    <a
+                      href="./assets/projects/simple-game/index.html"
+                      target="_blank"
+                      >Click here</a
+                    >
+                    for demo.
                   </div>
-                  <div class="card-content">
-                    <p>
-                      I created a website to search for a film whose data is taken
-                      from an API
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card text-bg-light">
+                  <img
+                    src="./assets/img/Screenshot (64).png"
+                    class="card-img-top"
+                    alt="perpus web app"
+                  />
+                  <div class="card-body">
+                    <p class="card-text">
+                      This is a project assignment given by my lecturer. I
+                      created a web application to manage book borrowing. The
+                      goal of this project is to understand and implement CRUD
+                      in the Laravel framework.
                     </p>
                   </div>
-                </div>
-              </swiper-slide>
-            </swiper-container>
-
-            <!-- <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="20"
-              centered-slides="true" autoplay-delay="2000" autoplay-disable-on-interaction="false" loop="true">
-              <swiper-slide>
-                <div class="card">
-                  <h1>Web Cahsier App</h1>
-                  <div class="card-img">
-                    <img src="./assets/img/Screenshot (48).png" width="250" alt="" />
-                  </div>
-                  <div class="card-content">
-                    <p>I made a web-based cashier application</p>
+                  <div class="card-footer text-center">
+                    This project was created on a local computer.
+                    <a
+                      href="https://github.com/Bayik4/perpus-web-app"
+                      target="_blank"
+                      >Click here</a
+                    >
+                    to go to my GitHub.
                   </div>
                 </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="card">
-                  <h1>Search Movie API</h1>
-                  <div class="card-img">
-                    <img src="./assets/img/Screenshot (13).png" width="250" alt="" />
-                  </div>
-                  <div class="card-content">
-                    <p>
-                      I created a website to search for a film whose data is taken
-                      from an API
-                    </p>
-                  </div>
-                </div>
-              </swiper-slide>
-            </swiper-container> -->
-          </div>
-        </div>
-      </section>
-
-      <!-- skill section -->
-      <section id="skill" class="margin-parallax">
-        <h1 class="judul">My Skill</h1>
-
-        <div class="con-skill">
-          <div class="stick">
-            <div class="stick-content">
-              <span style="display: flex; justify-content: center; align-items: center;">
-                <i class="fa-brands fa-html5" style="font-size: 30px; margin-right: 10px;"></i>
-                <h1>HTML</h1>
-              </span>
-            </div>
-          </div>
-
-          <div class="stick">
-            <div class="stick-content">
-              <span style="display: flex; justify-content: center; align-items: center;">
-                <i class="fa-brands fa-css3-alt" style="font-size: 30px; margin-right: 10px;"></i>
-                <h1>CSS</h1>
-              </span>
-            </div>
-          </div>
-
-          <div class="stick">
-            <div class="stick-content">
-              <span style="display: flex; justify-content: center; align-items: center;">
-                <i class="fa-brands fa-js" style="font-size: 30px; margin-right: 10px;"></i>
-                <h1>JavaScript</h1>
-              </span>
-            </div>
-          </div>
-
-          <div class="stick">
-            <div class="stick-content">
-              <span style="display: flex; justify-content: center; align-items: center;">
-                <i class="fa-brands fa-php" style="font-size: 30px; margin-right: 10px;"></i>
-                <h1>PHP</h1>
-              </span>
-            </div>
-          </div>
-
-          <div class="stick">
-            <div class="stick-content">
-              <span style="display: flex; justify-content: center; align-items: center;">
-                <i class="fa-brands fa-laravel" style="font-size: 30px; margin-right: 10px;"></i>
-                <h1>Laravel</h1>
-              </span>
-            </div>
-          </div>
-
-          <div class="stick">
-            <div class="stick-content">
-              <span style="display: flex; justify-content: center; align-items: center;">
-                <i class="fa-brands fa-bootstrap" style="font-size: 30px; margin-right: 10px;"></i>
-                <h1>Bootstrap</h1>
-              </span>
-            </div>
-          </div>
-
-          <div class="stick">
-            <div class="stick-content">
-              <span style="display: flex; justify-content: center; align-items: center;">
-                <i class="fa-brands fa-node-js" style="font-size: 30px; margin-right: 10px;"></i>
-                <h1>NodeJs</h1>
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- contact section -->
-      <section id="contact" class="parallax">
-        <div class="con-form">
-          <form action="" method="post" id="contact-form">
-            <h1 class="judul">Contact Me</h1>
-            <input
-              type="hidden"
-              name="to_name"
-              id="to_name"
-              value="Ayyik Arbail Idia"
-            />
-
-            <div class="label">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                name="from_name"
-                id="from_name"
-                placeholder="Enter your name"
-              />
-            </div>
-            <div class="label">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div class="label">
-              <label for="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="80"
-                rows="6"
-                placeholder="Your message"
-              ></textarea>
+              </div>
             </div>
             <button
-              type="submit"
-              name="submit"
-              class="btn"
-              style="cursor: pointer"
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
             >
-              Send
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
             </button>
-          </form>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-      </section>
-    </div>
-    <!-- content end -->
+      </div>
+    </section>
 
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
+    <!-- blog -->
+    <section id="blog"></section>
 
-    <!-- swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- testimonials -->
+    <section id="certifications" style="padding-top: 50px; margin-bottom: 50px">
+      <div class="container">
+        <h2 class="display-2 border-bottom">Certifications & Training</h2>
+        <div
+          class="container mt-3 d-flex justify-content-around align-items-center flex-nowrap overflow-hidden p-2 pt-5"
+        >
+          <div class="card text-bg-light" style="width: 18rem">
+            <img
+              src="./assets/img/introduction to javascript.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">
+                  Introduction to javascript - SoloLearn
+                </h5>
+              </div>
+              <p class="card-text">25 May, 2024</p>
+            </div>
+          </div>
 
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/script-navbar.js"></script>
+          <div class="card text-bg-light" style="width: 18rem">
+            <img
+              src="./assets/img/javascript intermediate.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">JavaScript Intermediate - SoloLearn</h5>
+              </div>
+              <p class="card-text">05 August, 2024</p>
+            </div>
+          </div>
+
+          <!-- <div class="card text-bg-light" style="width: 18rem">
+            <img
+              src="./assets/img/no-profile.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Card title</h5>
+                <div class="rating" style="color: rgb(233, 198, 0)">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div class="social d-flex gap-3">
+                <a href="" class="text-dark"><i class="bi bi-instagram"></i></a>
+                <a href="" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                <a href="" class="text-dark"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" style="padding-top: 50px; margin-bottom: 50px">
+      <div class="container">
+        <h2 class="display-2 border-bottom">Contact Me</h2>
+        <div class="container mt-3">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7">
+              <div class="card text-bg-light">
+                <div class="card-body">
+                  <form
+                    action=""
+                    method="post"
+                    class="d-flex flex-column gap-2"
+                    id="contact-form"
+                  >
+                    <input
+                      type="hidden"
+                      name="to_name"
+                      id="to_name"
+                      value="Ayyik Arbail Idia"
+                    />
+
+                    <div class="form-group">
+                      <label for="from_name">Your Name</label>
+                      <input
+                        type="text"
+                        name="from_name"
+                        class="form-control"
+                        id="from_name"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Your Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        id="email"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea
+                        name="message"
+                        id="message"
+                        class="form-control"
+                        rows="8"
+                      ></textarea>
+                    </div>
+
+                    <div class="text-center">
+                      <button
+                        type="submit"
+                        name="submit"
+                        class="btn btn-dark w-25"
+                      >
+                        <i class="bi bi-send"></i> Send
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="container">
+                <div class="card text-bg-light">
+                  <div class="card-header">
+                    <h3 class="display-6">Social</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="container d-flex flex-column align-items-start">
+                      <p class="h6 text-dark">
+                        <i class="bi bi-envelope-fill me-1"></i>
+                        ayikarbail@gmail.com
+                      </p>
+                      <!--  -->
+                      <a
+                        href="https://www.instagram.com/arbail.ayik?igsh=a25hcjhyc2I4NmIz"
+                        class="h6 text-dark"
+                        style="text-decoration: none"
+                        ><i class="bi bi-instagram me-1"></i> @arbail.ayik</a
+                      >
+                      <!--  -->
+                      <a
+                        href="https://www.linkedin.com/in/ayyik-arbail-idia-399731288"
+                        class="h6 text-dark"
+                        style="text-decoration: none"
+                        ><i class="bi bi-linkedin me-1"></i> Ayyik Arbail
+                        Idia</a
+                      >
+                      <!--  -->
+                      <a
+                        href="https://x.com/AArbail12?t=9nhM8mRpynEv3S-UR-l_ow&s=09"
+                        class="h6 text-dark"
+                        style="text-decoration: none"
+                        ><i class="bi bi-twitter-x me-1"></i> @AArbail12</a
+                      >
+                      <!--  -->
+                      <a
+                        href="https://wa.me/6285706076048"
+                        target="_blank"
+                        class="h6 text-dark"
+                        style="text-decoration: none"
+                        ><i class="bi bi-telephone-fill me-1"></i> +62
+                        857-0607-6048</a
+                      >
+                      <!--  -->
+
+                      <table>
+                        <tr class="align-top">
+                          <td>
+                            <i class="bi bi-geo-alt-fill me-1"></i>
+                          </td>
+                          <td>
+                            <a
+                              href="https://maps.app.goo.gl/nyzKYGzZFQTUbviU8"
+                              target="_blank"
+                              class="h6 text-dark"
+                              style="text-decoration: none"
+                            >
+                              Jl. Raya Candi VA No. 392A, Karangbesuki, Kec.
+                              Sukun, Kota Malang, Jawa Timur
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section id="footer">
+      <div
+        class="container-fluid text-bg-dark text-center p-3"
+        style="margin: 0"
+      >
+        <h6>Footer</h6>
+      </div>
+    </section>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- emailjs -->
     <script src="./assets/js/emailjs.js"></script>
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
